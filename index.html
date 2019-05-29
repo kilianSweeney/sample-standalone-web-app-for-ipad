@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en" manifest="cache.manifest.php">
+<head>
+    <meta charset="UTF-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"/>
+    <meta name="viewport" content="width=device-width,initial-scale=0.5"/>	
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon.png" />   <!-- note use a different image here -->
+    <title>LiftMaster Quiz</title>
+     <link type="text/css" rel="stylesheet" href="style.css" media="all" />
+    <script type="text/javascript" src="resources/js/jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        @media screen {
+            div#preloader {
+                position: absolute;
+                left: -9999px;
+                top:  -9999px;
+                }
+            div#preloader img {
+                display: block;
+                }
+            }
+        @media print {
+            div#preloader, 
+            div#preloader img {
+                visibility: hidden;
+                display: none;
+                }
+            }
+    </style>
+<!--[if IE]>
+<style>
+#quiz-result ul li, ul#quiz-answers li { margin: 20px; }
+.solar-power ul#quiz-answers li span,
+.battery-backup ul#quiz-answers li span,
+.smart-phone ul#quiz-answers li span,
+.control-access ul#quiz-answers li span,
+.action-history ul#quiz-answers li span,
+.speaker-system ul#quiz-answers li span,
+.cycles-per-day ul#quiz-answers li span { 
+    display: block;
+    padding: 90px 35px;
+}
+</style>
+<![endif]-->
+</head>
+<body class="front">
+    <div id="preloader">
+        <img src="images/answer-buttons-large.png" width="1" height="1" />
+        <img src="images/answer-products14.png" width="1" height="1" />
+    </div>
+    <div class="nav">
+        <div class="wrapper" id="first">
+            <a href="#" id="quiz-back">BACK</a>
+            <a href="#" id="quiz-start-over">RESTART</a>
+            <p>QUESTION <span id="quiz-q-index">1</span> <span style="font-size: smaller;">of</span> <span id="quiz-count">3</span></p>
+            <h2 id="quiz-question"></h2>
+        </div>
+        <div class="wrapper" id="last">
+            <div class="left">
+                <div></div>
+            </div>
+            <div class="right">
+                <h2>Commercial</h2>
+                <p>These product suggestions are based on your inputs and are not intended to represent a quote or recommendation. <span>Please contact your LiftMaster Representative before specification or purchase.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="quiz-wrapper">
+        <div class="quiz-header">
+<!--            <img src="images/logo.png"/>-->
+        </div>
+        <div id="quiz-intro">
+            <h2>Total Access Control</h2>
+            <h1>Solutions</h1>
+            <p>Find the right combination of Gate Operators and Access Systems for your individual application need.</p>
+            <a href="#" id="quiz-start">START</a>
+        </div>
+        <div style="display: none;" id="quiz-body">
+            <div id="quiz-qwrapper">
+                <ul id="quiz-answers"></ul>
+                <a style="display: none;" href="#" id="quiz-submit">submit</a>
+            </div>
+            <div style="display: none;" id="quiz-rwrapper">
+                <ul id="answer-grades">
+                    <li id="answer-pass">Correct!</li>
+                    <li id="answer-fail">Incorrect</li>
+                    </ul>
+                <ul id="quiz-answers-display"></ul>
+                <a href="#" class="active" id="quiz-continue">Next</a>
+            </div>
+            
+            <a style="display: none;" id="quiz-back">Back</a>
+            <a style="display: none;" href="#" id="quiz-reset">Start Over</a>
+        </div>
+        <div style="display: none;" id="quiz-result">
+            <p id="quiz-score"></p>
+        </div>
+        <div style="clear: both;height: 200px;"></div>
+    </div>
+    <div class="footer">
+        <div class="wrapper">
+            <div class="front-splash">
+                <img src="images/front-splash2.png"/>
+            </div>
+            <a id="quiz-restart">RESTART</a>
+            <img class="logo" src="images/logo.png"/>
+            <div style="position: absolute; right: 105px; bottom: 5px; font-size: 11px;"><span>6/17</span> ©2017 All Rights Reserved.</div>
+        </div>
+    </div>
+  <!--<table id="list">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Question Answer</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>-->
+</body>
+</html>
